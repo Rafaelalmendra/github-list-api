@@ -10,11 +10,12 @@ interface RepositoryItemProps {
 function RepositoryItem(props: RepositoryItemProps) {
     return (
         <li>
-            <strong>{props.repository.name}</strong>
-            <p>{props.repository.description ?? 'Sem descrição'}</p>
+            <h3>{props.repository.name}</h3>
 
+            <p>{props.repository.description ?? 'Sem descrição'}</p>
+            
             <a href={props.repository.html_url} target='_blank' rel='noreferrer'>
-                Acessar repositório
+                <button>Acessar repositório</button> 
             </a>
         </li>
     )
